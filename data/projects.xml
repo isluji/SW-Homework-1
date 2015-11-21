@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projects>
+    <project title="Project 1">
+        <budget>20000</budget>
+        <duration>13</duration>
+        <domain>Semantic web</domain>
+        <objective>Hakuna matata</objective>
+        
+        <partner name="Ismael" leader="true"/>
+        
+        <workPackage name="Project Management">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <country>Spain</country>
+        <email>abcd@gmail.com</email>
+    </project>
+    
+    <project title="Project 2">
+        <budget>11300</budget>
+        <duration>9</duration>
+        <domain>Data mining</domain>
+        <objective>Live and let live</objective>
+        
+        <partner name="Ismael"/>
+        <partner name="Alex"/>
+        <partner name="Gorka" leader="true"/>
+        
+        <workPackage name="pack1">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack2">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack3">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack4">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack5">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack6">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack7">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <country>UK</country>
+        <email>godsavethequeen@gmail.com</email>
+    </project>
+    
+    <project title="Project 3">
+        <budget>17840</budget>
+        <duration>5</duration>
+        <domain>Semantic web</domain>
+        <objective>Tutti frutti</objective>
+        
+        <partner name="Pepe"/>
+        <partner name="Paco" leader="true"/>
+        <partner name="Perico"/>
+        <partner name="Juan"/>
+        
+        <workPackage name="pack1">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack2">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack3">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack4">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+        
+        <workPackage name="pack5">
+            <duration>2</duration>
+            <description>3</description>
+        </workPackage>
+    </project>
+</projects>

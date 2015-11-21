@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="projects">
+        <xs:complexType>
+            <xs:sequence>
+                
+                <xs:element name="project" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="budget" type="xs:float"/>
+                            <xs:element name="duration" type="xs:integer"/>
+                            <xs:element name="domain" type="xs:string"/>
+                            <xs:element name="objective" type="xs:string"/>
+                            
+                            <xs:element name="partner" type="partnerType" maxOccurs="unbounded"/>
+                            <xs:element name="workPackage" type="wpType" maxOccurs="unbounded"/>
+                            
+                            <xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                        </xs:sequence>
+                        
+                        <xs:attribute name="title" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                                
+            </xs:sequence>
+        </xs:complexType>
+        
+        <xs:unique name="UniqueLeaderPartner">
+            <xs:selector xpath="partner"/>
+            <xs:field xpath="@leader"/>
+        </xs:unique>
+    </xs:element>
+    
+    <!-- If we constrain the 'leader' attribute with an unique element, the value of that
+        attribute on any partner must be unique. Then, if we restrict the 'leader' attribute 
+        to an optional enumeration of one value "true", then there could only be one leader partner -->
+    <xs:simpleType name="leaderType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="partnerType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="leader" type="leaderType" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="wpType">
+        <xs:sequence>
+            <xs:element name="duration" type="xs:integer"></xs:element>
+            <xs:element name="description" type="xs:string"></xs:element>
+        </xs:sequence>
+        
+        <xs:attribute name="name" type="xs:string"></xs:attribute>
+    </xs:complexType>
+</xs:schema>
